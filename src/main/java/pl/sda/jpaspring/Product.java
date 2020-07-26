@@ -7,9 +7,6 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Entity
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
 public class Product {
 
     @Id
@@ -22,4 +19,23 @@ public class Product {
 
     @Enumerated(EnumType.STRING)
     private ProductType productType;
+
+    public Product() {
+    }
+
+    public Product( String isbn, String productName, ProductType productType){
+        this.isbn = isbn;
+        this.productName = productName;
+        this.productType = productType;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", isbn='" + isbn + '\'' +
+                ", productName='" + productName + '\'' +
+                ", productType=" + productType +
+                '}';
+    }
 }

@@ -9,7 +9,7 @@ public class CustomerController {
     @Autowired  //spring uzupelni w tym miejscu referencje do serwisu - DEPENDENCY INJECTION
     private CustomerService customerService;
 
-    @RequestMapping("/")
+    @RequestMapping("/customers")
     public String customersForm() {
         return "customersForm"; //nazwa pliku html ktory zostanie wyswietlony
     }

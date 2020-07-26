@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class ProductController {
 
+    @Autowired
+    ProductService productService;
 
     @RequestMapping("/products")
     public String productForm(){
@@ -15,7 +17,7 @@ public class ProductController {
 
     @RequestMapping("/addProduct")
     public String addProduct(String productNameInput, String isbnInput, String productTypeInput){
-        ProductService.addProduct(productNameInput,isbnInput,productTypeInput );
+        productService.addProduct(productNameInput,isbnInput,productTypeInput );
         return "productForm";
     }
 

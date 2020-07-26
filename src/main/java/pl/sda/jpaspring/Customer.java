@@ -25,4 +25,14 @@ public class Customer {
         this.surname = surname;
         this.pesel = pesel;
     }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", surname='" + surname + '\'' +
+                ", pesel='" + pesel + '\'' +
+                '}';
+    }
 }

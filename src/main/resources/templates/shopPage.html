@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop</title>
+</head>
+<body>
+Customers : <br>
+<a href="/customers">KLIENCI</a>
+
+<ul>
+    <li th:each="clients : ${customerList}">
+        <p th:text="${clients}"></p>
+    </li>
+</ul>
+
+Products: <br>
+<a href="/product">PRODUKTY</a>
+
+<ul>
+    <li th:each="product : ${productList}">
+        <p th:text="${product}"></p>
+    </li>
+</ul>
+</body>
+</html>
