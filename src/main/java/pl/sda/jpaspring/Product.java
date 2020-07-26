@@ -31,11 +31,10 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Product{" +
-                "id=" + id +
-                ", isbn='" + isbn + '\'' +
-                ", productName='" + productName + '\'' +
-                ", productType=" + productType +
-                '}';
+        return
+                "ID: " + id +
+                "  ,   ISBN: " + isbn +
+                "  ,   NAZWA: " + productName +
+                "  ,   TYP: " + productType;
     }
 }
